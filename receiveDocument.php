@@ -188,7 +188,7 @@ else {
 </table>
 
 <?php
-
+/*
 $filename="data/".$_SESSION['department'].".txt";
 $latest_timestamp=filemtime($filename);
 echo "
@@ -258,7 +258,7 @@ Comet.prototype = {
 var comet = new Comet();
 comet.connect();
 </script>";
-
+*/
 ?>
 <?php
 // echo "
