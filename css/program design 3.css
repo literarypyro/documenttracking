@@ -1,0 +1,22 @@
+body{
+	font-family:Arial, Verdana, sans-serif;
+
+
+}
+table {
+	border-collapse:collapse;
+
+}
+#cssTable {
+//background-color: #0066cb;
+color: #ffcc35;
+
+}
+a:link {
+text-decoration: none;
+}
+
+#exception a{
+text-decoration: none;
+color: #ffffff;
+}

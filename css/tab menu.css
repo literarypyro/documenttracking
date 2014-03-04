@@ -1,0 +1,82 @@
+	pre {text-indent: 30px}
+
+	#tabmenu {
+		color: #000;
+		margin: 12px 0px 0px 0px;
+		padding: 0px;
+		z-index: 1;
+		padding-left: 10px }
+
+	#tabmenu li {
+		display: inline;
+		overflow: hidden;
+		list-style-type: none; }
+
+		
+	#tabmenu li:hover>ul{display:block;}
+
+		
+	#tabmenu a, a.active {
+		/*color: #ffcc35;
+		background: #3333ff;
+		*/
+		font: bold 1em "Trebuchet MS", Arial, sans-serif;
+		//border: 1px solid black;
+		padding: 2px 5px 0px 5px;
+		margin: 0;
+		text-decoration: none; }
+
+	#tabmenu a.active {
+		/*
+		background: #c3c3e5;
+		*/
+//		border-bottom: 1px solid #c3c3e5; 
+	}
+
+	#tabmenu a:hover {
+		color: #fff;
+		//background: #ADC09F;
+		}
+
+	#tabmenu a:visited {
+		color: #E8E9BE; }
+
+	#tabmenu a.active:hover {
+		//background: #ABAD85;
+		//color: #DEDECF; 
+	}
+
+	#content {
+		text-align: justify;
+		background: #c3c3e5;
+		padding: 1px;
+		border: 1px solid black;
+		border-top: none;
+		z-index: 2;	
+		}
+
+	#content a {
+		text-decoration: none;
+		//color: #E8E9BE; 
+		}
+
+	#content1 a:hover { background: #898B5E; }
+	
+	
+		#content1 {
+		text-align: justify;
+		//background: #c3c3e5;
+		padding: 1px;
+		border: 1px solid black;
+		border-top: none;
+		z-index: 2;	
+		}
+
+	#content1 a {
+		text-decoration: none;
+		//color: #E8E9BE; }
+
+	#content1 a:hover { 
+	//background: #898B5E; 
+	}
+	

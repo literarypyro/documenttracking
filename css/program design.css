@@ -1,0 +1,31 @@
+body{
+	font-family:Arial, Verdana, sans-serif;
+}
+table {
+	border-collapse:collapse;
+	border:2px solid black;
+
+	}
+td {
+	border: 1px solid gray;
+	
+//	background-color: rgb(213,233,237);
+//	background-color: #95cbe9;
+}
+
+th {
+	border: 1px solid gray;
+//	background-color: rgb(125,146,167);
+//	color:white;
+//	color: #bd2031;
+}
+
+#viewlink {
+	background-color: white;
+}
+
+#viewlink a {
+	color:red;
+	text-decoration: none;
+}
+
