@@ -162,7 +162,7 @@ session_start();
 		
 		$details[0]=$_POST['doc_subject'];
 		$details[1]=$selectDate;
-		$details[2]=$_SESSION['document_type'];
+		$details[2]=$_POST['document_type'];
 		$details[3]=$origOfficer;
 		$details[4]=$received_date;
 		$details[5]=$_SESSION['department'];

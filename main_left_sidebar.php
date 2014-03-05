@@ -37,7 +37,7 @@ $orders=$rs->num_rows;
 
 <div class="masthead" align=center>
 <ul class="nav nav-justified">
-	<li <?php if($_GET['ts']=="2"){ echo "class='active'"; } ?>><a id='ACTIONS' href="receiveDocument.php?ts=2#ACTIONS" onclick="">NEW ACTION</a></li>
+	<li <?php if($_GET['ts']=="2"){ echo "class='active'"; } ?>><a id='ACTIONS' href="createDocument.php" onclick="">NEW ACTION</a></li>
 	<li <?php if($_GET['pp']=="1a"){ echo "class='active'"; } ?>><a id='PENDING'  href="receiveDocument.php?pp=1a&iN=10&St=10#PENDING">INCOMING <?php if($pending>0){ echo "(".$pending.")"; } ?></a></li>
 	<li <?php if($_GET['pp']=="1b"){ echo "class='active'"; } ?>><a id='OUTGO'  href="receiveDocument.php?pp=1b&iN=10&St=10#OUTGO">OUTGOING <?php if($outgoing>0){ echo "(".$outgoing.")"; } ?></a></li>
 	<li <?php if($_GET['pp']=="5"){ echo "class='active'"; } ?>><a id='FORWARDEDCOPY'  href="receiveDocument.php?pp=5&cInG=10#FORWARDEDCOPY">COPIES RECEIVED <?php if($copies>0){ echo "(".$copies.")"; } ?></a></li>

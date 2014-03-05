@@ -115,24 +115,22 @@ legend {
 <div class='well col-md-8'>
 <form enctype="multipart/form-data" id='submitForm' name='submitForm' action='submit.php' method='post'>
 <legend>
-<?php
-switch($_SESSION['document_type']){
-	case "OUT":
-		echo "Outgoing Document";
-		break;
-	case "IN":
-		echo "Incoming Document";
-		break;
-	case "ORD":
-		echo "Office Order";
-		break;
-	case "MEMO";
-		echo "Internal Document";
-		break;
-}
-?>
+Receive/Issue New Document
 </legend>
 <table align=center >
+<tr>
+	<td><label class='control-label'>Type of Document:</label></td>
+	<td>
+	<select class="form-control" name='document_type'>
+		<option value='IN'>Incoming</option>
+		<option value='MEMO'>Internal Document</option>
+		<option value='ORD'>Office Order</option>
+		<option value='OUT'>Outgoing</option>
+	</select>
+	
+	</td>
+</tr>
+
 <tr>
 	<td><label class='control-label'>Subject of Document:</label></td>
 	<td><input type='text' name='doc_subject' size=40 /></td>
@@ -177,19 +175,7 @@ switch($_SESSION['document_type']){
 	</td>
 </tr>
 <tr>
-	<td><label class='control-label'>Date/Time 
-		<?php
-		if($_SESSION['document_type']=="OUT"){
-		?>
-		Sent for Approval: 
-		<?php
-		}
-		else {
-		?>
-		Received:  
-		<?php
-		}
-		?>
+	<td><label class='control-label'>Date/Time Sent/Received:
 	</label></td>
 	<td>
 	<div class='form-inline'>
