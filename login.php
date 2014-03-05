@@ -5,6 +5,10 @@ session_start();
 //Clear all previous sessions
 //session_destroy();
 ?>
+<?php 
+require("db_page.php");
+$newDb=instantiateDb();
+?>
 <?php
 $_SESSION['page']="login.php";
 require("header.php");
