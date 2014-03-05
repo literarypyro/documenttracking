@@ -114,7 +114,24 @@ legend {
 <div class='container'>
 <div class='well col-md-8'>
 <form enctype="multipart/form-data" id='submitForm' name='submitForm' action='submit.php' method='post'>
-<legend>Receive/Issue New Document</legend>
+<legend>
+<?php
+switch($_SESSION['document_type']){
+	case "OUT":
+		echo "Outgoing Document";
+		break;
+	case "IN":
+		echo "Incoming Document";
+		break;
+	case "ORD":
+		echo "Office Order";
+		break;
+	case "MEMO";
+		echo "Internal Document";
+		break;
+}
+?>
+</legend>
 <table align=center >
 <tr>
 	<td><label class='control-label'>Subject of Document:</label></td>
