@@ -26,12 +26,12 @@ BACK-UP ACCOUNT
 //$db=retrieveUsersDb();
 
 $db=retrieveRecordsDb();
-$sql="INSERT INTO `classification` (`classification_desc`) VALUES ('Monthly Activity Report')";
+$sql="INSERT INTO classification ('classification_desc') VALUES ('Monthly Activity Report')";
 $rs=$db->query($sql);
 
 $activity_id=$db->insert_id;
 
-$sql="INSERT INTO `division_classification` (`division_id`,`classification_id`) VALUES ('ALL','$activity_id')";
+$sql="INSERT INTO division_classification('division_id','classification_id') VALUES ('ALL','$activity_id')";
 $rs=$db->query($sql);
 
 
