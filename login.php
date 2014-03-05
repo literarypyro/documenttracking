@@ -7,7 +7,8 @@ session_start();
 ?>
 <?php 
 require("db_page.php");
-$newDb=instantiateDb();
+$_SESSION['db']=instantiateDb();
+
 ?>
 <?php
 $_SESSION['page']="login.php";

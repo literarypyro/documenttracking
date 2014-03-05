@@ -34,7 +34,7 @@ function instantiateDb(){
 	
 	$db2=new mysqli('mysqlsdb.co8hm2var4k9.eu-west-1.rds.amazonaws.com','depbeuw9bkz','Gpqq1jD7sLGp','depbeuw9bkz');
 	
-	$_SESSION['db']=$db2;
+	//$_SESSION['db']=$db2;
 	return $db2;
 }
 
