@@ -23,9 +23,9 @@ BACK-UP ACCOUNT
 <div class='col-lg-10'>
 	<label class='control-label'>
 <?php
-$db=retrieveUsersDb();
-$status=backupStatus($db);
-if($status=="true"){ echo "[Currently Enabled] Your account will be disabled in the next login"; } else { echo "[Currently Disabled] Your account is currently enabled"; }
+//$db=retrieveUsersDb();
+//$status=backupStatus($db);
+//if($status=="true"){ echo "[Currently Enabled] Your account will be disabled in the next login"; } else { echo "[Currently Disabled] Your account is currently enabled"; }
 ?>
 	</label>
 </div>
