@@ -15,10 +15,8 @@ if(isset($_POST['records_username'])){
 	if($_POST['records_username']==$_SESSION["username"]){
 		$message="";	
 		
-//		$db2=retrieveUsersDb();
-//		$db2=retrieveRecordsDb();
+		$db2=retrieveUsersDb();
 	
-		$db2=$db;
 		$message=verifyUser($db2,$_POST['records_username'],$_POST['records_password']);
 		
 		if($message=="Okay for access."){

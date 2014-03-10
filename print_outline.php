@@ -8,6 +8,14 @@ window.open(url,"_self");
 }
 
 </script>
+<style type='text/css'>
+table {
+	border-collapse:collapse;
+
+
+}
+
+</style>
 <?php
 require("Classes/PHPExcel.php");
 require("Classes/PHPExcel/IOFactory.php");
