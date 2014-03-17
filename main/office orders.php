@@ -8,7 +8,8 @@ $date=date("Y-m-d");
 //$db=retrieveRecordsDb();
 
 
-$sql="select * from routing_targets inner join document_routing on routing_targets.routing_id=document_routing.id where status='ISSUED AND SENT' and destination_office in ('".$_SESSION['department']."','ALL OFFICERS') and request_date like '".$date."%%'";
+$sql="select * from routing_targets inner join document_routing on routing_targets.routing_id=document_routing.id where status in ('ISSUED AND SENT','CLOSED') and destination_office in ('".$_SESSION['department']."','ALL OFFICERS') and request_date like '".$date."%%'";
+
 $rs=$db->query($sql);
 $nm=$rs->num_rows;
 if(isset($_GET['dFO'])){
@@ -76,7 +77,11 @@ $reference=calculateReferenceNumber($db2,$row2,adjustControlNumber($row['referen
 <td><a href='document_history.php?view=<?php echo $row2['ref_id']; ?>'>See Document History</a></td>
 </tr>
 <?php
+	if($row['status']=="CLOSED"){
+	}
+	else {
 	$routing_Option.="<option value='".$reference."'>".$row2['subject']."</option>";
+	}
 }
 $routing_Option.="</select>";
 ?>

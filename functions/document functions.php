@@ -131,9 +131,12 @@ function prepareUpload($documentType,$office,$security,$filename,$originOffice){
 		$target_path="uploads/".$security."/".$folder;
 	}
 	
-	
+	if($filename==""){
+	$target_path="";
+	}
+	else {
 	$target_path = $target_path."/".$filename; 
-	
+	}
 	return $target_path;
 
 	
@@ -166,13 +169,13 @@ function recordDownloadAccess($db,$reference_number,$username,$department){
 }
 
 function retrieveDocumentAccess($db,$reference_number){
-	$sql="select * from document_access where reference_id='".$reference_number."'";
+	$sql="select * from document_access where reference_id='".$reference_number."' limit 10";
 	$rs=$db->query($sql);
 	return $rs;
 }
 
 function retrieveDownloadAccess($db,$reference_number){
-	$sql="select * from download where reference_id='".$reference_number."'";
+	$sql="select * from download where reference_id='".$reference_number."' limit 10";
 	$rs=$db->query($sql);
 	return $rs;
 	

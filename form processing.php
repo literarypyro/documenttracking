@@ -156,8 +156,6 @@ session_start();
 		$selectDay=date("Y-m-d",strtotime($_POST['document_date']));
 		
 		$selectDate=$selectDay." ".$documentHour.":".$documentMinute.":00";
-		
-
 		$incrementId=retrieveIncrement($db);
 		
 		$details[0]=$_POST['doc_subject'];
@@ -297,7 +295,10 @@ session_start();
 					$receiveMinute=0;
 					$receiveHour=adjustTime($_POST["amorpm"],$_POST["receiveHour"]);
 
-					$receiveDay=$_POST['receiveYear']."-".$_POST['receiveMonth']."-".$_POST['receiveDay'];
+//					$receiveDay=$_POST['receiveYear']."-".$_POST['receiveMonth']."-".$_POST['receiveDay'];
+					$receiveDay=date("Y-m-d",strtotime($_POST['receive_date']));
+
+
 
 					$receiveMinute=$_POST['receiveMinute'];
 					$received_date=$receiveDay." ".$receiveHour.":".$receiveMinute.":00";
@@ -813,6 +814,9 @@ session_start();
 					$status[1]="PENDING";
 					updateRoutingStatus($db,$_SESSION['department'],$status,$row['id']);
 					
+					$status[0]="CLOSED";
+					$status[1]="ISSUED AND SENT";
+					updateRoutingStatus($db,$_SESSION['department']."','ALL OFFICERS",$status,$row['id']);
 					
 					
 					

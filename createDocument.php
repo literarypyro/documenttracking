@@ -122,10 +122,10 @@ Receive/Issue New Document
 	<td><label class='control-label'>Type of Document:</label></td>
 	<td>
 	<select class="form-control" name='document_type'>
-		<option value='IN'>Incoming</option>
 		<option value='MEMO'>Internal Document</option>
 		<option value='ORD'>Office Order</option>
-		<option value='OUT'>Outgoing</option>
+		<option value='IN'>Incoming (from outside MRT)</option>
+		<option value='OUT'>Outgoing (to outside MRT)</option>
 	</select>
 	
 	</td>

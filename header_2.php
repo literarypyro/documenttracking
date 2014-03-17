@@ -17,3 +17,10 @@ ini_set("date.timezone","Asia/Kuala_Lumpur");
 </tr>
 </table>
 </div>
+<style type='text/css'>
+body {
+	font-size:12px;
+
+}
+
+</style>

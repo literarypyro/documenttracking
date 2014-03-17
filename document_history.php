@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 	<?php
 	/** Document History Page
 	*
@@ -163,12 +164,12 @@ $actionTable="
 
 $actionTable.="
 	<tr>
-		<td valign=center><br>".date("F d, Y, h:iA",strtotime($row['request_date']))."<br></td>
-		<td align=center><br>".strtoupper($officer_name)."<br>".$officer_position."</td>
-		<td align=center><br>".strtoupper($officer_name2)."<br>".$officer_position2."</td>
-		<td align=center><br>".$action."<br></td>
-		<td align=center><br>".$row2["remarks"]."<br></td>			
-		<td align=center><br>".$actionStatus."<br></td>	
+		<td valign=center>".date("F d, Y, h:iA",strtotime($row['request_date']))."<br></td>
+		<td align=center>".strtoupper($officer_name)."<br>".$officer_position."</td>
+		<td align=center>".strtoupper($officer_name2)."<br>".$officer_position2."</td>
+		<td align=center>".$action."<br></td>
+		<td align=center>".$row2["remarks"]."<br></td>			
+		<td align=center>".$actionStatus."<br></td>	
 	</tr>
 	";
 			if($i==(($nm2*1)-1)){
@@ -187,9 +188,11 @@ echo $actionTitle.$actionHeading.$actionTable;
 <!--Routing History/Actions Table-->
 <br>
 
-
+<table width=100%>
+<tr>
+<td valign=top align=center>
 <!--Download History Table-->
-<table id='cssTable' class='table table-striped table-bordered table-hover' border=1 width=100%>
+<table id='cssTable' class='table table-striped table-bordered table-hover'  border=1 style='width:80%;'>
 <thead>
 <tr>
 <th colspan=5><h3>DOWNLOAD HISTORY</h3></th>
@@ -219,11 +222,11 @@ echo $actionTitle.$actionHeading.$actionTable;
 </tbody>
 </table>
 <!--Download History Table-->
-
-<br>
+</td>
+<td valign=top align=center>
 
 <!--User Access Table-->
-<table id='cssTable' class='table table-striped table-bordered table-hover' width=100%>
+<table id='cssTable' class='table table-striped table-bordered table-hover'   style='width:80%' >
 <thead>
 <tr>
 <th colspan=5><h3>USERS WHO ACCESSED RECORD</h3></th>
@@ -252,6 +255,10 @@ echo $actionTitle.$actionHeading.$actionTable;
 ?>
 </tbody>
 </table>
+</td>
+</tr>
+</table>
+
 <!--User Access Table-->
 <?php
 }

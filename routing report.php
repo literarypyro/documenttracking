@@ -233,12 +233,12 @@ session_start();
 	$actionTable.="
 	<tbody>
 	<tr>
-		<td valign=center><br>".date("F d, Y h:ia",strtotime($row['request_date']))."<br></td>
-		<td align=center><br>".strtoupper($officer_name)."<br>".$officer_position."</td>
-		<td align=center><br>".strtoupper($officer_name2)."<br>".$officer_position2."</td>
-		<td align=center><br>".$action."</br></td>	
-		<td align=center><br>".$remark."</br></td>	
-		<td align=center><br>".$actionStatus."</br></td>	
+		<td valign=center>".date("F d, Y h:ia",strtotime($row['request_date']))."<br></td>
+		<td align=center>".strtoupper($officer_name)."<br>".$officer_position."</td>
+		<td align=center>".strtoupper($officer_name2)."<br>".$officer_position2."</td>
+		<td align=center>".$action."</br></td>	
+		<td align=center>".$remark."</br></td>	
+		<td align=center>".$actionStatus."</br></td>	
 	</tr>";
 			if($i==(($nm2*1)-1)){
 				$lastDestination=$row['from_office'];
